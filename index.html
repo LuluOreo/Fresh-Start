@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Paws Adoption Center</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcebf7;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #f47ecb;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #ff6bae;
+        }
+
+        .counter {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px lightgray;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="application.html">Adopt Now</a>
+</nav>
+
+<h1>🐾 Fresh Start Animal Rescue 🐾</h1>
+
+<div class="counter">
+    Animals Adopted: <span id="adoptCount">1</span>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <img src="/Users/lauren/Desktop/About Me/IMG_9325.HEIC">
+        <h3>Smokey the Cat</h3>
+        <p>Smokey is an Turkish Van who loves climbing things and running around. Her name fits her perfectly as she is a quiet observer who loves to perch high.</p>
+        <button onclick="adoptPet('Smokey the Cat')">Adopt Me</button>
+    </div>
+
+    <div class="card">
+        <img src="/Users/lauren/Desktop/About Me/IMG_0620.HEIC">
+        <h3>Oreo the Dog</h3>
+        <p>Oreo is a Labradoodle. He enjoys long walks and belly rubs. He is very energetic and loves kids. He is always ready to play fetch or take a trip to the park.</p>
+        <button onclick="adoptPet('Oreo the Dog')">Adopt Me</button>
+    </div>
+    
+    <div class="card">
+        <img src="/Users/lauren/Desktop/About Me/IMG_9641.HEIC">
+        <img src="/Users/lauren/Desktop/About Me/IMG_9639.HEIC">
+        <h3>Luna and Sol- ADOPTED</h3>
+        <p>These two American Wirehairs are almost always found curled up together in the same bed, tails entwined. They are inseparable. Luna is the sleepy one while Sol loves to meet new people. </p>
+        <button >ADOPTED!</button>
+    </div>
+
+</div>
+
+<script>
+    let adopted = 1;
+
+    function adoptPet(petName) {
+        adopted = adopted + 1;
+        document.getElementById("adoptCount").textContent = adopted;
+        alert("Thank you for adopting " + petName + "!");
+    }
+</script>
+
+</body>
+</html>
