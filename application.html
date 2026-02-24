@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Adoption Form</title>
+
+    <style>
+        body {
+            font-family: Aerial, sans-serif;
+            background-color: #fcebf7;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #f47ecb;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 40px;
+            font-size: 100px;
+        }
+        .content img {
+        width:200px;
+        height:200px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        font-size: 100px;
+        }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .image-grid img {
+            width: 30%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        input,
+        input[type=email],
+        select{
+            padding: 12px 20px;
+            font-size: 30px;
+            width: 30%;
+            height: 50%;
+        }
+        #petType {
+            font-size: 70px;
+            padding: 12px 15px;
+            width: 20%;
+            height: 80%;
+            cursor: pointer;
+        }
+        #petType option {
+            font-size: 70px;
+            padding: 70px;
+        }
+        .large-label {
+            font-size: 50px;
+        }
+        .submit-btn {
+            font-size: 30px;
+            color: #f47ecb;
+        }
+        body {
+            color:rgb(255, 171, 217);
+        }
+        h1 {
+            color:rgb(253, 138, 196);
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="application">Adopt Now</a>
+</nav>
+
+    <div class="form-container">
+        <h1>Pet Adoption Application</h1>
+        <form id="adoptionForm">
+
+            <!--Personal Info-->
+            <div class="form-group">
+                <label for="name" class="large-label">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Lauren Chung">
+            </div>
+            
+            <div class="form-group">
+                <label for="name" class="large-label">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
+            </div>
+
+            <!-- Pet Preferences -->
+            <div class="form-group">
+                <label for="name" class="large-label">Which pet are you interested in?</label>
+                <select id="petType" name="petType">
+                    <option value="cat">Smokey</option>
+                    <option value="dog">Oreo</option>
+                </select>
+            </div>
+            
+            <!-- Question Area -->
+            <div class="form-group">
+                <label for="name" class="large-label">Why do you want to adopt this pet?</label>
+                <textarea id="reason" name="reason" rows="3" placeholder="Tell us about your home..."></textarea>
+            </div>
+
+    
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+    
+    <div id="thankYouMessage" style="display: none; text-align: center; padding: 20px;">
+        <h2>Thank you for your application!</h2>
+        <p>We will review it and get back to you!</p>
+    </div>
+
+<script>
+        const adoptionForm = document.getElementById('adoptionForm');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+    adoptionForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        adoptionForm.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+    });
+</script>
+</body>
+</html>
